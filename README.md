@@ -1,13 +1,11 @@
 # co6f14249b468fa5fdd02f1f5
 
-Quick start:
+Try it now!! https://timely-dasik-647bfc.netlify.app/
 
-```
-$ npm install
-$ npm start
-````
 
-Head over to https://vitejs.dev/ to learn more about using vite
+Trainig code with some upgrades
+
+
 ## About Scrimba
 
 At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
