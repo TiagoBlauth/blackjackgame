@@ -25,13 +25,17 @@ function getRandomCard() {
 }
 
 function startGame() {
-    isAlive = true
-    let firstCard = getRandomCard()
-    let secondCard = getRandomCard()
-    cards = [firstCard, secondCard]
-    sum = firstCard + secondCard
-    player.chips -= 10
-    renderGame()
+    if (player.chips >= 10) {
+        isAlive = true
+        let firstCard = getRandomCard()
+        let secondCard = getRandomCard()
+        cards = [firstCard, secondCard]
+        sum = firstCard + secondCard
+        player.chips -= 10
+        renderGame()
+    } else {
+        messageEl.textContent = "Not enough chips, sorry"
+    }
 }
 
 function renderGame() {
@@ -58,10 +62,14 @@ function renderGame() {
 
 function newCard() {
     if (isAlive === true && hasBlackJack === false) {
-        let card = getRandomCard()
-        sum += card
-        cards.push(card)
-        player.chips -= 5
-        renderGame()
+        if (player.chips > 10) {
+            let card = getRandomCard()
+            sum += card
+            cards.push(card)
+            player.chips -= 5
+            renderGame()
+        } else {
+            messageEl.textContent = "Not enough chips, sorry"
+        }
     }
 }
