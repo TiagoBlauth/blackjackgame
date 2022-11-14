@@ -1,5 +1,6 @@
 {
   "name": "project",
+  "homepage": https://vermillion-trifle-5c2e34.netlify.app/
   "dependencies": {},
   "devDependencies": {
     "vite": "latest"
